@@ -1,5 +1,3 @@
-package mst;
-
 import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -7,12 +5,11 @@ import java.util.regex.Pattern;
 import org.apache.commons.collections4.MultiValuedMap;
 import org.apache.commons.collections4.map.MultiValueMap;
 
-public class test {
+public class sol {
 	
 	public static class Edge{
 		String x;
 		int weight;
-		
 		public Edge(String x, int weight){this.x = x; this.weight = weight;}
 		public String getCity(){return x;}
 		public int getWeight(){return weight;}
@@ -22,15 +19,13 @@ public class test {
 	    int min = 999; 
 	    int pos = 0 ;
 		for(int i = 0; i < listOfEdges.size(); i++)
-		{	//System.out.println(listOfEdges.get(i).getCity());
+		{
 	    	 if(listOfEdges.get(i).getWeight() < min)
 	    		 {
 	    		 min = listOfEdges.get(i).getWeight();
-	    		 //System.out.println(min);
 	    		 pos = i;
 	    		 }
 	    }
-		//System.out.println("FINAL" + listOfEdges.get(pos).getCity());
 	return listOfEdges.get(pos);
 	}
 	
